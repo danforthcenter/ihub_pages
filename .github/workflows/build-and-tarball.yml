@@ -37,20 +37,21 @@ jobs:
           extended: true
 
       # Step 3: Build the Hugo site
+      - name: Build Hugo site
+        run: |
+          # Define the repository name to construct the GitHub Pages base URL
+          # This extracts the repository name from GITHUB_REPOSITORY (e.g., 'username/repo-name' -> 'repo-name')
+          REPO_NAME=$(echo ${{ github.repository }} | cut -d '/' -f 2)
+          GITHUB_PAGES_BASEURL="https://${{ github.actor }}.github.io/${REPO_NAME}/"
 
-      - name: Build Hugo site
-        run: |
-          # Define the repository name to construct the GitHub Pages base URL
-          # This extracts the repository name from GITHUB_REPOSITORY (e.g., 'username/repo-name' -> 'repo-name')
-          REPO_NAME=$(echo ${{ github.repository }} | cut -d '/' -f 2)
-          GITHUB_PAGES_BASEURL="https://${{ github.actor }}.github.io/${REPO_NAME}/"
+          # Ensure the public directory is clean before building
+          rm -rf public
+          # Build the site into the 'public' directory
+          # --minify is recommended for production builds
+          # --gc cleans up unused cache files
+          # --baseURL overrides the base URL for GitHub Pages deployment
+          hugo --minify --gc --baseURL "${GITHUB_PAGES_BASEURL}"
 
-          # Ensure the public directory is clean before building
-          rm -rf public
-          # Build the site, overriding baseURL for GitHub Pages deployment
-          hugo --minify --gc --baseURL "${GITHUB_PAGES_BASEURL}"
-
-      # ... (subsequent steps) ...
       # Step 4: Create a tarball of the static assets
       - name: Create tarball of static assets
         run: |
@@ -72,7 +73,6 @@ jobs:
           path: ${{ env.TARBALL_NAME }}
           retention-days: 7 # How long to keep the artifact (e.g., 7 days)
 
-  #Optional: Add a job to deploy to GitHub Pages (if you also want a live site)
   deploy_to_gh_pages:
     environment:
       name: github-pages
@@ -87,16 +87,16 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-  
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
-  
+
       - name: Upload artifact for GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
           path: './public' # Upload the public directory for Pages
-  
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

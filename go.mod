@@ -1,5 +1,5 @@
-module github.com/VectorFrankenstein/ihub_pages
+module github.com/YOUR_USERNAME/YOUR_REPO_NAME
 
 go 1.21
 
-require github.com/StefMa/hugo-fresh v0.0.0-20230522095239-9ed8e8b6a31e // indirect
+require github.com/StefMa/hugo-fresh master // indirect

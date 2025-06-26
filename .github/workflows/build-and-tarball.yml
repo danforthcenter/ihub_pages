@@ -13,18 +13,14 @@ on:
 # Define the jobs to run in this workflow
 jobs:
   build_and_archive:
-    # The runner environment for this job
     runs-on: ubuntu-latest
 
-    # Steps define the sequence of tasks for this job
     steps:
       # Step 1: Checkout the repository code
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          # Fetch all history for .GitInfo and .Lastmod in Hugo
           fetch-depth: 0
-          # Include submodules if your Hugo theme is a submodule
           submodules: true
 
       # Step 2: Set up Go environment (needed for Hugo modules)
@@ -40,43 +36,46 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
-      # Step 4: Initialize and download Hugo modules
-      - name: Initialize Hugo modules
+      # Step 4: Clean and initialize Hugo modules (more robust approach)
+      - name: Clean and initialize Hugo modules
         run: |
-          # Initialize Hugo modules if go.mod doesn't exist
-          if [ ! -f go.mod ]; then
-            hugo mod init github.com/${{ github.repository }}
-          fi
-          # Download/update Hugo modules
-          hugo mod get -u
+          # Remove any existing module files that might cause conflicts
+          rm -f go.mod go.sum
+          
+          # Initialize Hugo modules with your repository
+          hugo mod init github.com/${{ github.repository }}
+          
+          # Directly get the theme from master branch
+          hugo mod get github.com/StefMa/hugo-fresh@master
+          
+          # Clean up and ensure dependencies are correct
           hugo mod tidy
+          hugo mod verify
 
       # Step 5: Build the Hugo site
       - name: Build Hugo site
         run: |
-          # Ensure the public directory is clean before building
+          # Clean public directory
           rm -rf public
-          # Build the site into the 'public' directory
+          
+          # Build with verbose output for debugging
           hugo --minify --gc --verbose
+          
+          # Verify critical files exist
+          echo "Checking for CSS files..."
+          find public -name "*.css" | head -5
+          echo "Checking for JS files..."
+          find public -name "*.js" | head -5
 
-      # Step 6: List contents to debug
-      - name: Debug - List public directory contents
-        run: |
-          echo "Contents of public directory:"
-          find public -type f -name "*.css" -o -name "*.js" | head -20
-          echo "Total files in public:"
-          find public -type f | wc -l
-
-      # Step 7: Create a tarball of the static assets
+      # Step 6: Create a tarball of the static assets
       - name: Create tarball of static assets
         run: |
-          # Define the output file name for the tarball
           TARBALL_NAME="hugo-site-$(date +%Y%m%d-%H%M%S)-${{ github.sha }}.tar.gz"
           tar -czvf $TARBALL_NAME public/
           echo "Tarball created: $TARBALL_NAME"
           echo "TARBALL_NAME=$TARBALL_NAME" >> "$GITHUB_ENV"
 
-      # Step 8: Upload the tarball as a workflow artifact
+      # Step 7: Upload the tarball as a workflow artifact
       - name: Upload static site tarball
         uses: actions/upload-artifact@v4
         with:
@@ -101,7 +100,6 @@ jobs:
           fetch-depth: 0
           submodules: true
 
-      # Set up Go environment for Hugo modules
       - name: Setup Go
         uses: actions/setup-go@v4
         with:
@@ -113,24 +111,23 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
-      # Initialize and download Hugo modules
-      - name: Initialize Hugo modules
-        run: |
-          if [ ! -f go.mod ]; then
-            hugo mod init github.com/${{ github.repository }}
-          fi
-          hugo mod get -u
-          hugo mod tidy
-
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
 
-      # Build specifically for GitHub Pages
+      # Clean and initialize Hugo modules (same as build job)
+      - name: Clean and initialize Hugo modules
+        run: |
+          rm -f go.mod go.sum
+          hugo mod init github.com/${{ github.repository }}
+          hugo mod get github.com/StefMa/hugo-fresh@master
+          hugo mod tidy
+          hugo mod verify
+
+      # Build specifically for GitHub Pages with correct baseURL
       - name: Build Hugo site for GitHub Pages
         run: |
           rm -rf public
-          # Build with the GitHub Pages URL
           hugo --minify --gc --baseURL "${{ steps.pages.outputs.base_url }}"
 
       - name: Upload artifact for GitHub Pages

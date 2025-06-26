@@ -1,18 +1,20 @@
-baseURL: https://danforthcenter.github.io/ihub_pages/
+# Set a placeholder baseURL - this will be overridden during GitHub Pages build
+baseURL: "/"
 languageCode: en-us
-title: Ionomics Hub Resecurrected
+title: Ionomics Hub Resurrected
 
 module:
   # uncomment line below for local development of module
   # workspace: hugo.work
   imports:
-    path: github.com/StefMa/hugo-fresh
-
+    - path: github.com/StefMa/hugo-fresh
 
 googleAnalytics: # Put in your tracking code without quotes like this: UA-XXX for universal tracking or G-XXX analytics v4 tracking
+
 # Disables warnings
 disableKinds:
-- taxonomy
+  - taxonomy
+
 markup:
   goldmark:
     renderer:
@@ -22,11 +24,11 @@ params:
   # Open graph allows easy social sharing. If you don't want it you can set it to false or just delete the variable
   openGraph: true
   # Used as meta data; describe your site to make Google Bots happy
-  description:
+  description: "Ionomics Hub - Your source for ionomics data and analysis"
   # Preloader ensures images are loaded before displaying to the user. If you don't want it uncomment to set it to false
   # preloader: false
   navbarlogo:
-  # Logo (from static/images/logos/___)
+    # Logo (from static/images/logos/___)
     image: logos/logo.svg
     link: /
     # Default width/height. Uncomment if you need to change
@@ -37,7 +39,7 @@ params:
     sizes: [400,600]
   hero:
     # Main hero title
-    title: Ionomics Hub, ressurected. 
+    title: Ionomics Hub, resurrected.
     # Hero subtitle (optional)
     subtitle: Text that explains why Ionomics Hub went down and had to be rebuilt here.
     # Button text
@@ -48,69 +50,72 @@ params:
     image: illustrations/ihub.png
     # Footer logos (from static/images/logos/clients/*.svg)
     # urls are optional
+  
   # Customizable navbar. For a dropdown, add a "sublinks" list.
   navbar:
-  - title: Features
-    url: /
-  - title: File Exchange
-    url: /
-  - title: Species
-    sublinks:
-    - title: Yeast
+    - title: Features
       url: /
-    - title: Arabidopsis
+    - title: File Exchange
       url: /
-    - title: Dropdown item
-      url: /
-    button: true
+    - title: Species
+      sublinks:
+        - title: Yeast
+          url: /
+        - title: Arabidopsis
+          url: /
+        - title: Dropdown item
+          url: /
+      button: true
+  
   sidebar:
     # Logo (from static/images/logos/___.svg)
     logo: fresh-square
     sections:
-    - title: User
-      icon: user
-      links:
-      - text: Profile
-        url: /
-      - text: Account
-        url: /
-      - text: Settings
-        url: /
-    - title: Messages
-      icon: envelope
-      links:
-      - text: Inbox
-        url: /
-      - text: Compose
-        url: /
-    - title: Images
-      icon: image
-      links:
-      - text: Library
-        url: /
-      - text: Upload
-        url: /
-    - title: Settings
-      icon: cog
-      links:
-      - text: User settings
-        url: /
-      - text: App settings
-        url: /
+      - title: User
+        icon: user
+        links:
+          - text: Profile
+            url: /
+          - text: Account
+            url: /
+          - text: Settings
+            url: /
+      - title: Messages
+        icon: envelope
+        links:
+          - text: Inbox
+            url: /
+          - text: Compose
+            url: /
+      - title: Images
+        icon: image
+        links:
+          - text: Library
+            url: /
+          - text: Upload
+            url: /
+      - title: Settings
+        icon: cog
+        links:
+          - text: User settings
+            url: /
+          - text: App settings
+            url: /
+  
   section1:
     tiles:
-    - title: Yeast zscores table
-      icon: yeast
-      text: This is some explanatory text that is on two rows
-      url: /
-      buttonText: Yeast normal tables
-    - title: Cloud integration
-      icon: arabidopsis 
-      text: This is some explanatory text that is on two rows
-      url: /
-      buttonText: Arabidopsid table download
-    - title: Arabidopsis normal scores
-      icon: normal-image
-      text: This is some explanatory text that is on two rows
-      url: /
-      buttonText: Download now
+      - title: Yeast zscores table
+        icon: yeast
+        text: This is some explanatory text that is on two rows
+        url: /
+        buttonText: Yeast normal tables
+      - title: Cloud integration
+        icon: arabidopsis
+        text: This is some explanatory text that is on two rows
+        url: /
+        buttonText: Arabidopsis table download
+      - title: Arabidopsis normal scores
+        icon: normal-image
+        text: This is some explanatory text that is on two rows
+        url: /
+        buttonText: Download now

@@ -68,27 +68,32 @@ jobs:
           retention-days: 7 # How long to keep the artifact (e.g., 7 days)
 
   #Optional: Add a job to deploy to GitHub Pages (if you also want a live site)
-  deploy_to_gh_pages:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build_and_archive # This job depends on the build_and_archive job
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-  
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v4
-  
-      - name: Upload artifact for GitHub Pages
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: './public' # Upload the public directory for Pages
-  
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+deploy_to_gh_pages:
+        environment:
+          name: github-pages
+          url: ${{ steps.deployment.outputs.page_url }}
+        runs-on: ubuntu-latest
+        needs: build_and_archive
+        # --- THIS IS THE CRUCIAL PART ---
+        permissions:
+          pages: write # Required to deploy to GitHub Pages
+          id-token: write # Required to authenticate with GitHub Pages with OIDC
+        # --- END OF CRUCIAL PART ---
+        steps:
+          - name: Checkout repository
+            uses: actions/checkout@v4
+            with:
+              fetch-depth: 0
+
+          - name: Setup Pages
+            id: pages
+            uses: actions/configure-pages@v4
+
+          - name: Upload artifact for GitHub Pages
+            uses: actions/upload-pages-artifact@v3
+            with:
+              path: './public'
+
+          - name: Deploy to GitHub Pages
+            id: deployment
+            uses: actions/deploy-pages@v4

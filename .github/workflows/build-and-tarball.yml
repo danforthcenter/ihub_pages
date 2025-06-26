@@ -37,15 +37,20 @@ jobs:
           extended: true
 
       # Step 3: Build the Hugo site
-      - name: Build Hugo site
-        run: |
-          # Ensure the public directory is clean before building
-          rm -rf public
-          # Build the site into the 'public' directory
-          # --minify is recommended for production builds
-          # --gc cleans up unused cache files
-          hugo --minify --gc
 
+      - name: Build Hugo site
+        run: |
+          # Define the repository name to construct the GitHub Pages base URL
+          # This extracts the repository name from GITHUB_REPOSITORY (e.g., 'username/repo-name' -> 'repo-name')
+          REPO_NAME=$(echo ${{ github.repository }} | cut -d '/' -f 2)
+          GITHUB_PAGES_BASEURL="https://${{ github.actor }}.github.io/${REPO_NAME}/"
+
+          # Ensure the public directory is clean before building
+          rm -rf public
+          # Build the site, overriding baseURL for GitHub Pages deployment
+          hugo --minify --gc --baseURL "${GITHUB_PAGES_BASEURL}"
+
+      # ... (subsequent steps) ...
       # Step 4: Create a tarball of the static assets
       - name: Create tarball of static assets
         run: |

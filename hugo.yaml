@@ -1,5 +1,5 @@
 # Set a placeholder baseURL - this will be overridden during GitHub Pages build
-baseURL: "/"
+baseURL: "https://danforthcenter.github.io/ihub_pages/"
 languageCode: en-us
 title: Ionomics Hub Resurrected
 

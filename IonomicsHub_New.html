@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>IonomicsHub_New</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="sane_defaults.css" />
+</head>
+<body>
+<h1 id="welcome-to-the-revamped-ionomics-hub">Welcome to the revamped
+Ionomics hub</h1>
+<p>The IonomicsHub (iHUB) was first accessible to the public in 2007 as
+the Purdue Ionomics Information Management System (PiiMS). Hosted at
+Purdue University, the system provided integrated workflow control, data
+storage, and analysis to facilitate high-throughput ionomic data
+collection, along with integrated tools for data search, retrieval,
+visualization, and creation of DOIs associated with sets of data (Baxter
+et al., 2007).</p>
+<p>Ionomic data collected on Arabidopsis thaliana shoot samples was
+actively loaded onto the iHUB from 2002 – 2011. It contained ionomics
+data on 205,169 unique A. thaliana samples. This represented
+approximately 4,000,000 publically accessible data points from 15,369
+unique lines/accessions, and includes 11,478 fast neutron mutagenized
+plants, 28,357 T-DNA mutagenized plants (representing 3,452 genes),
+21,960 EMS mutagenized plants, and 40,388 wild-type plants including 753
+different accessions and 1,474 inbred lines. Over the years the system
+was upgraded with the addition of various features (e.g. Salt et al.,
+2014), and extended to host data on 26,268 rice samples and 51,554
+Saccharomyces cerevisiae samples, including a genome-wide set of
+knockout and over expression strains (Yu et al., 2012). Since it went
+live the iHUB had 15,423 unique users from 124 countries.</p>
+<p>In 2019 the iHUB was moved to the University of Nottingham where it
+underwent extensive software upgrades. In 2018 the iHUB domain name
+ionomicshub.org was renewed by Purdue University for 5 years.
+Unfortunately, when the domain name came up for renewal in 2023 it was
+mistakenly not renewed, and was bought by a third party. This third
+party was unwilling to sell the domain name back to the iHUB. Owners of
+the ionomicshub.org domain are now using the domain to host their own
+website, where they are also using the iHUB logo without permission. To
+be clear: Despite the use of the iononomicshub logo and scraped text
+from the old ionomicshub.org, neither David Salt nor Ivan Baxter have
+any association with the current ionomicshub.org. The current owners do
+not have the data they are claiming.</p>
+<p>Unfortunately, the ionomicshub.org address was hardcoded into the
+underlying code, so the full ionomicshub system crashed and we have been
+unable to resurrect it. To continue to provide community access to the
+ionomics data that was hosted at the iHUB, we have deposited the
+underlying datasets at Zenodo and linked them from this site using the
+ionomicshub.work domain. Here, we provide links for download of files
+containing ionomic data from the iHUB on <em>A. thaliana</em> and <em>S.
+cerevisiae</em>. This site no longer provides the ability to upload
+data, or perform searches, visualization or data set and DOI generation.
+The ionomicshub.work domain is owned by Ivan Baxter and it is our
+intention to maintain this site in perpetuity as a reference for the
+community. If we are able to recover additional data from the original
+ionomicshub.org or if others have deposited additional ionomics datasets
+on public repositories, we will be happy to add links to that data.</p>
+<p>Baxter et al., 2007
+www.plantphysiol.org/cgi/doi/10.1104/pp.106.092528</p>
+<p>Salt et al., 2014 http://dx.doi.org/10.1145/2567948.2577033</p>
+<p>Yu et al., 2012 http://www.biomedcentral.com/1471-2164/13/623</p>
+<p>Campos et al., 2021 https://doi.org/10.1111/tpj.15177</p>
+<p>File of Arabidopsis thaliana shoot ionomic data 1. Elemental
+concentrations (showing the isotope used for quantification) normalized
+to sample weight, units ppm (Note to Ivan – this data is row 10176 –
+26222 in the spreadsheet from trays 243 – 1875). Data shown as median
+values (Note to Ivan – n used in calculation of median shown in
+‘Occurences’ field). Metadata associated with samples including growth
+conditions, line name and genetic background also shown. 2. Zscore
+(showing the isotope used for quantification) normalized to either
+average of wild-type genetic background or sample set average, using
+weight normalised data (Note to Ivan – this data is row 26229 - 42582 in
+the spreadsheet from trays 243 – 1875). Data shown as median values
+(Note to Ivan – n used in calculation of median shown in ‘Occurences’
+field). Metadata associated with samples including growth conditions,
+line name and genetic background also shown. 3. Elemental concentrations
+(showing the isotope used for quantification) normalized to sample
+weight, units ppm for leaf tissue of A. thaliana 1001 collection with
+replicate samples, and normalization, as described in Campos et al.,
+(2021). 4. Elemental concentrations (showing the isotope used for
+quantification) normalized to sample weight, units ppm for seed tissue
+of A. thaliana 1001 collection with replicate samples, and
+normalization, as described in Campos et al., (2021). 5. Elemental
+concentrations (showing the isotope used for quantification) for leaf
+and seed tissue of A. thaliana 1001 showing a single fully normalized
+value for each accession as described in Campos et al., (2021). Data
+downloaded from https://ffionexplorer.nottingham.ac.uk/ionmap/
+29/06/2025.</p>
+<p>Files of Saccharomyces cerevisiae ionomic data 1. Elemental
+concentrations (showing the isotope used for quantification) showing
+individual replicate samples in units of ppb divided by the optical
+density of the culture and normalized using the method described in Yu
+et al., (2012) for genome-wide knockout (haploid and diploid) and
+overexpression collection 2. Elemental concentrations (showing the
+isotope used for quantification) showing zstat score for each line
+(replicates not shown) normalized using the method described in Yu et
+al., (2012) for genome-wide knockout (haploid and diploid) and
+overexpression collection.</p>
+<h1 id="yeast-files"><strong>Yeast files:</strong></h1>
+<p><a
+href="https://ddpsc-my.sharepoint.com/:x:/g/personal/rdhakal_danforthcenter_org/Efj-pTmVEQxItxFUhoT7R5wBuhuIulvv5LS-Tvjkb1ZNCQ?download=1">Yeast
+Nstat table</a></p>
+<pre><code>- Normal stat scores for Arabidopsis</code></pre>
+<p><a
+href="https://ddpsc-my.sharepoint.com/:x:/g/personal/rdhakal_danforthcenter_org/ERWjHxV94LtBlJqxHygRsFoBMXV3PHJnY5VSsLoSPmOsLA?download=1">Arabidopsis
+Ostat table</a></p>
+<pre><code>- Observed stat scores for Arabidopsis </code></pre>
+<p><a
+href="https://ddpsc-my.sharepoint.com/:x:/g/personal/rdhakal_danforthcenter_org/EQfd2WbfWMxPuxIUMhhxD5UBcjP0vfegr5pnKh8lvv9wlA?download=1">Arabidopsis
+Zstat table</a></p>
+<pre><code>- Zscore stat scores for Arabidopsis   </code></pre>
+<h1 id="file-store"><strong>File Store</strong></h1>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 0%" />
+<col style="width: 1%" />
+<col style="width: 1%" />
+<col style="width: 69%" />
+<col style="width: 8%" />
+<col style="width: 1%" />
+<col style="width: 1%" />
+<col style="width: 1%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr>
+<th>file_id</th>
+<th>uploadedby</th>
+<th>uploadedon</th>
+<th>description</th>
+<th>filelocation</th>
+<th>category</th>
+<th>File Sent to Rijan</th>
+<th>Uploaded to Cyverse</th>
+<th>Link to file</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>16</td>
+<td>gziegler</td>
+<td>8/29/12</td>
+<td>¬†R scripts and data from Ziegler et al. Plant Genome, 2012</td>
+<td>/var/piims/tomcat5/data/Ziegler_etal_PlantGenome2012_ScriptsAndData.zip</td>
+<td>Soybean</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>41</td>
+<td>gziegler</td>
+<td>1/20/16</td>
+<td>R scripts from Shakoor et al. Sorghum GWAS 2016</td>
+<td>/var/piims/tomcat5/data/Shakooretal2016.Scripts.zip</td>
+<td>Other</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>24</td>
+<td>ibaxter</td>
+<td>2/3/14</td>
+<td>¬†Scripts and Data files for Baxter et al. 2014.
+<br><br>http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0087628</td>
+<td>/var/piims/tomcat5/data/ScriptsandData.zip</td>
+<td>Maize</td>
+<td></td>
+<td></td>
+<td>https://www.dropbox.com/scl/fi/9qlqmocxtx3fzzyqmjux3/ScriptsandData.zip?rlkey=l8idkgiueilhitrzlnbshi1tw&amp;st=r6fh3pc7&amp;dl=0</td>
+</tr>
+<tr>
+<td>51</td>
+<td>ionadmin</td>
+<td>2/7/18</td>
+<td>Scripts and data for  'Multivariate analysis reveals environmental
+and genetic determinants of element covariation in the maize grain
+ionome¬í <br>Asaro et
+al.  https://www.biorxiv.org/content/early/2017/12/31/241380</td>
+<td>/var/piims/tomcat5/data/Multivariate_Analysis_of_Maize_Grain_Ionome_Data_and_Scripts.zip</td>
+<td>Maize</td>
+<td></td>
+<td></td>
+<td>https://www.dropbox.com/scl/fi/nkurujk6qygnshjh0dam4/Multivariate_Analysis_of_Maize_Grain_Ionome_Data_and_Scripts.zip?rlkey=t5uetw810u3k86t41mtaq66wi&amp;dl=0</td>
+</tr>
+<tr>
+<td>46</td>
+<td>gziegler</td>
+<td>3/31/16</td>
+<td>¬†Ionomics data, Joint Linkage and GWAS results from 2006 North
+Carolina, Florida, New York and Puerto Rico grow-outs of Maize NAM
+population.</td>
+<td>/var/piims/tomcat5/data/MaizeNAMionomicsandGWASdata.zip</td>
+<td>Maize</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>12</td>
+<td>gziegler</td>
+<td>8/9/12</td>
+<td>¬†All ionomics data from the Clayton, NC 2006 NAM grow
+out.<br><br>Fields:<br><br>plate= 48 well plate seeds are loaded into.
+Unique in experiment<br>numinset= unique ID within each WR set<br>Run=
+sample # on ICP unique within each WR set<br>Fullnum= sample number
+within the whole experiment<br>ICP.run= ICP run - usually 576 samples
+per run<br>WR.run= WR run - 288 samples<br>WR.plate= plate within the WR
+run, 6 48-well plates/WR.run<br>ICP.plate= plate within the ICP run 12
+48-well plates/ICP.run<br>ICP.runnum= sample number on ICP unique within
+each ICP run<br><br>Missing numbers in ICP.runnum,Run, and fullnum are
+usually the locations Controls were run at.<br><br>All data is
+weight-normalized ppm concentrations.</td>
+<td>/var/piims/tomcat5/data/MaizeNAM.ClaytonNCdataset.csv</td>
+<td>Maize</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>15</td>
+<td>gziegler</td>
+<td>8/13/12</td>
+<td>Ionomics data from the Florida 2006 NAM grow
+out.<br><br>Fields:<br><br>plate= 48 well plate seeds are loaded into.
+Unique in experiment<br>numinset= unique ID within each WR set<br>Run=
+sample # on ICP unique within each WR set<br>Fullnum= sample number
+within the whole experiment<br>ICP.run= ICP run - usually 576 samples
+per run<br>WR.run= WR run - 288 samples<br>WR.plate= plate within the WR
+run, 6 48-well plates/WR.run<br>ICP.plate= plate within the ICP run 12
+48-well plates/ICP.run<br>ICP.runnum= sample number on ICP unique within
+each ICP run<br><br>Missing numbers in ICP.runnum,Run, and fullnum are
+usually the locations Controls were run at.<br><br>All data is
+weight-normalized ppm concentrations.</td>
+<td>/var/piims/tomcat5/data/MaizeNAM.06FLdataset.csv</td>
+<td>Maize</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>53</td>
+<td>baxter</td>
+<td>6/7/19</td>
+<td>IPSRI.2015.2016.IonomicsData.csv contains measurements of elemental
+concentrations for the  Illinois Protein Strain Recombinant Inbred
+(IPSRI) population grown at UIUC in 2015 and 2016. There is a row for
+each seed measured, multiple seeds were measured per plot.
+Concentrations were normalized for sample weight and corrected for batch
+effects by extracting the residuals from this linear model:Phenotype ~
+batch + kernelWeight. Thus, each phenotype can be interpreted as
+concentration (in parts-per-billion) above or below the population mean.
+Extreme analytical outliers have been removed from this dataset. The
+SingleSeedWeight is the weight of the kernel digested and analyzed for
+ionomics in milligrams. This data was generated as part of the NSF award
+IOS-1638507</td>
+<td>/var/piims/tomcat5/data/IPSRI.2015.2016.IonomicsData.zip</td>
+<td>Maize</td>
+<td></td>
+<td></td>
+<td>https://www.dropbox.com/scl/fi/kbh46wmftqvjxmrv4mw3f/2015.2016.IPSRI.Ionomics.Data.zip?rlkey=3r7gkip4yl6rf7cl6wko90zea&amp;dl=0</td>
+</tr>
+<tr>
+<td>14</td>
+<td>gziegler</td>
+<td>8/9/12</td>
+<td>Purdue 2010 IBM, Association Panel, and Ky21 Maize population
+ionomics data.<br><br>Fields:<br><br>plate= 48 well plate seeds are
+loaded into. Unique in experiment<br>numinset= unique ID within each WR
+set<br>Run= sample # on ICP unique within each WR set<br>Fullnum= sample
+number within the whole experiment<br>ICP.run= ICP run - usually 576
+samples per run<br>WR.run= WR run - 288 samples<br>WR.plate= plate
+within the WR run, 6 48-well plates/WR.run<br>ICP.plate= plate within
+the ICP run 12 48-well plates/ICP.run<br>ICP.runnum= sample number on
+ICP unique within each ICP run<br><br>Missing numbers in ICP.runnum,Run,
+and fullnum are usually the locations Controls or samples from another
+population were run<br><br>All data is weight-normalized ppm
+concentrations.</td>
+<td>/var/piims/tomcat5/data/IBM.AssPan.Ky21.10PUdataset.csv</td>
+<td>Maize</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>13</td>
+<td>gziegler</td>
+<td>8/9/12</td>
+<td>Purdue 2009 IBM and Association Panel Maize ionomics
+data.<br><br>Fields:<br><br>plate= 48 well plate seeds are loaded into.
+Unique in experiment<br>numinset= unique ID within each WR set<br>Run=
+sample # on ICP unique within each WR set<br>Fullnum= sample number
+within the whole experiment<br>ICP.run= ICP run - usually 576 samples
+per run<br>WR.run= WR run - 288 samples<br>WR.plate= plate within the WR
+run, 6 48-well plates/WR.run<br>ICP.plate= plate within the ICP run 12
+48-well plates/ICP.run<br>ICP.runnum= sample number on ICP unique within
+each ICP run<br><br>Missing numbers in ICP.runnum,Run, and fullnum are
+usually the locations Controls were run at.<br><br>All data is
+weight-normalized ppm concentrations.</td>
+<td>/var/piims/tomcat5/data/IBM.AssPan.09PUdataset.csv</td>
+<td>Maize</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>52</td>
+<td>ibaxter</td>
+<td>10/5/18</td>
+<td>¬†Scripts and Data files for Kohler et al. "Increased temperatures
+may safeguard the nutritional quality of crops under future elevated CO2
+concentrations"</td>
+<td>/var/piims/tomcat5/data/FInalKohler_Scriptsanddatafiles.zip</td>
+<td>Soybean</td>
+<td></td>
+<td></td>
+<td>https://www.dropbox.com/scl/fi/4yzeovpkqemaghp50sfiq/FInalKohler_Scriptsanddatafiles.zip?rlkey=zztsbcq34i8otcxa3t4xi3igh&amp;dl=0</td>
+</tr>
+<tr>
+<td>50</td>
+<td>ibaxter</td>
+<td>8/18/16</td>
+<td>¬†Final Data and Scripts from Huber et al, PeerJ 2016 "Canopy
+position has a profound effect on soybean seed composition" <br></td>
+<td>/var/piims/tomcat5/data/FinalDataAndScripts081816.zip</td>
+<td>Soybean</td>
+<td></td>
+<td></td>
+<td>https://www.dropbox.com/scl/fi/gltosbkp71lovstcp15tn/FinalDataAndScripts081816.zip?rlkey=uelxytv59s0h5jv22uxwy8gq0&amp;st=hyy88593&amp;dl=0</td>
+</tr>
+<tr>
+<td>42</td>
+<td>ibaxter</td>
+<td>3/29/16</td>
+<td>¬†Raw data, scripts, tables and figures for "Canopy position has a
+profound effect on soybean seed composition"<br></td>
+<td>/var/piims/tomcat5/data/FinalDataAndScripts.zip</td>
+<td>Soybean</td>
+<td></td>
+<td></td>
+<td>not needed</td>
+</tr>
+<tr>
+<td>54</td>
+<td>dsalt</td>
+<td>6/20/22</td>
+<td>Data for <br> https://dx.doi.org/10.4231/XN41-Y754</td>
+<td>/var/piims/tomcat5/data/dataset39.zip</td>
+<td>Other</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>40</td>
+<td>desalt</td>
+<td>9/28/15</td>
+<td>Data for <br> http://dx.doi.org/10.4231/T9NP22C0</td>
+<td>/var/piims/tomcat5/data/dataset37.zip</td>
+<td>Other</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>38</td>
+<td>desalt</td>
+<td>12/11/14</td>
+<td>Data for <br> http://dx.doi.org/10.4231/T9X63JTN</td>
+<td>/var/piims/tomcat5/data/dataset35.zip</td>
+<td>Other</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>39</td>
+<td>desalt</td>
+<td>10/27/14</td>
+<td>Data for <br> http://dx.doi.org/10.4231/T9SF2T3B</td>
+<td>/var/piims/tomcat5/data/dataset34.zip</td>
+<td>Other</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>37</td>
+<td>desalt</td>
+<td>10/20/14</td>
+<td>Data for <br> http://dx.doi.org/10.4231/T91Z4291</td>
+<td>/var/piims/tomcat5/data/dataset33.zip</td>
+<td>Other</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>36</td>
+<td>desalt</td>
+<td>9/30/14</td>
+<td>Data for <br> http://dx.doi.org/10.4231/T95Q4T1C</td>
+<td>/var/piims/tomcat5/data/dataset32.zip</td>
+<td>Other</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>35</td>
+<td>desalt</td>
+<td>9/30/14</td>
+<td>Data for <br> http://dx.doi.org/10.4231/T99G5JRP</td>
+<td>/var/piims/tomcat5/data/dataset31.zip</td>
+<td>Other</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>34</td>
+<td>desalt</td>
+<td>9/30/14</td>
+<td>Data for <br> http://dx.doi.org/10.4231/T9F769GD</td>
+<td>/var/piims/tomcat5/data/dataset30.zip</td>
+<td>Other</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>33</td>
+<td>desalt</td>
+<td>9/30/14</td>
+<td>Data for <br> http://dx.doi.org/10.4231/T9JW8BS3</td>
+<td>/var/piims/tomcat5/data/dataset29.zip</td>
+<td>Other</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>32</td>
+<td>desalt</td>
+<td>9/30/14</td>
+<td>Data for <br> http://dx.doi.org/10.4231/T9PN93HT</td>
+<td>/var/piims/tomcat5/data/dataset28.zip</td>
+<td>Other</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>31</td>
+<td>desalt</td>
+<td>9/30/14</td>
+<td>Data for <br> http://dx.doi.org/10.4231/T9TD9V75</td>
+<td>/var/piims/tomcat5/data/dataset27.zip</td>
+<td>Other</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>30</td>
+<td>desalt</td>
+<td>4/18/14</td>
+<td>Data for <br> http://dx.doi.org/10.4231/T96Q1V5R</td>
+<td>/var/piims/tomcat5/data/dataset26.zip</td>
+<td>Other</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>29</td>
+<td>desalt</td>
+<td>4/17/14</td>
+<td>Data for <br> http://dx.doi.org/10.4231/T9BG2KW2</td>
+<td>/var/piims/tomcat5/data/dataset25.zip</td>
+<td>Other</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>28</td>
+<td>desalt</td>
+<td>4/14/14</td>
+<td>Data for <br> http://dx.doi.org/10.4231/T9KW5CXG</td>
+<td>/var/piims/tomcat5/data/dataset22.zip</td>
+<td>Other</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>27</td>
+<td>desalt</td>
+<td>2/18/14</td>
+<td>Data for <br> http://dx.doi.org/10.4231/T9QN64N6</td>
+<td>/var/piims/tomcat5/data/dataset20.zip</td>
+<td>Other</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>26</td>
+<td>desalt</td>
+<td>2/18/14</td>
+<td>Data for <br> http://dx.doi.org/10.4231/T9VD6WCJ</td>
+<td>/var/piims/tomcat5/data/dataset19.zip</td>
+<td>Other</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>22</td>
+<td>desalt</td>
+<td>6/26/13</td>
+<td>Data for <br> http://dx.doi.org/10.4231/T93X84K7</td>
+<td>/var/piims/tomcat5/data/dataset16.zip</td>
+<td>Other</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>21</td>
+<td>admin_mzereba</td>
+<td>12/7/12</td>
+<td>Data for <br> http://dx.doi.org/10.5072/FK2B27ZGV</td>
+<td>/var/piims/tomcat5/data/dataset14.zip</td>
+<td>Other</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>20</td>
+<td>desalt</td>
+<td>10/30/12</td>
+<td>This contains data for <br> http://dx.doi.org/10.4231/T9H41PBV</td>
+<td>/var/piims/tomcat5/data/dataset10.zip</td>
+<td>Other</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>47</td>
+<td>baxter</td>
+<td>4/11/16</td>
+<td>Data Final Files For BL15-001-abc</td>
+<td>/var/piims/tomcat5/data/BL15-001-abc.zip</td>
+<td>Soybean</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>48</td>
+<td>baxter</td>
+<td>4/11/16</td>
+<td>Data Final Files For BL15-001-abc</td>
+<td>/var/piims/tomcat5/data/BL15-001-abc.zip</td>
+<td>Other</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>49</td>
+<td>baxter</td>
+<td>4/21/16</td>
+<td>Data Final Files For BL12-028 - Nadia Sorghum Samples</td>
+<td>/var/piims/tomcat5/data/BL12-028_-_Nadia_Sorghum_Samples.zip</td>
+<td>Other</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>23</td>
+<td>ibaxter</td>
+<td>7/2/13</td>
+<td>R scripts and data from Baxter et al. PNAS 2008</td>
+<td>/var/piims/tomcat5/data/Baxter_etal_supp_scriptsandinputfiles.zip</td>
+<td>Arabidopsis</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>11</td>
+<td>ibaxter</td>
+<td>3/15/12</td>
+<td>R scripts and data from Baxter et al. PLoS ONE, 2012</td>
+<td>/var/piims/tomcat5/data/Baxter_etal_PLoSONE_2012_data_scripts.zip</td>
+<td>Arabidopsis</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>43</td>
+<td>gziegler</td>
+<td>3/31/16</td>
+<td>Ionomics data and QTL results of 10 grow-outs of the Maize IBM
+population. Published in Asaro et al. 2016.</td>
+<td>/var/piims/tomcat5/data/Asaroetal2016.MaizeIBMionomicsandQTLdata.zip</td>
+<td>Maize</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>17</td>
+<td>admin_mzereba</td>
+<td>6/18/17</td>
+<td>All public ionomics data from the Arabidopsis PiiMs in CSV
+format</td>
+<td>/var/piims/tomcat5/data/Arabidopsis_PublicDataReport.zip</td>
+<td>Arabidopsis</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Arabidopsis</strong></p>
+<p><a
+href="https://ddpsc-my.sharepoint.com/:x:/g/personal/rdhakal_danforthcenter_org/EZxN77t2VRBAv9RtdHyicGAB2sCAh-vZbNgqb3-M5s-COQ?download=1">Arabidopsis
+Sample Zscore table</a></p>
+</body>
+</html>

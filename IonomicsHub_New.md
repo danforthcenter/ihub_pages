@@ -14,7 +14,7 @@ Please note that all data shared cannot be guaranteed to be the final published 
     
 ## [Arabidopsis_MedianNormalized_07222010](https://zenodo.org/records/15831531/files/Arabidopsis_MedianNormalized_07222010.csv?download=1)
 
-- Elemental concentrations (showing the isotope used for quantification) normalized to sample weight, units ppm (Note to Ivan – this data is row 10176 – 26222 in the spreadsheet from trays 243 – 1875). Data shown as median values (Note to Ivan – n used in calculation of median shown in ‘Occurences’ field). Metadata associated with samples including growth conditions, line name and genetic background also shown.
+- Elemental concentrations (showing the isotope used for quantification) normalized to sample weight, units ppm. Data shown as median values. Metadata associated with samples including growth conditions, line name and genetic background also shown.
 
 ## [Arabidopsis_MedianZscore_07222010](https://zenodo.org/records/15831531/files/Arabidopsis_MedianZscore_07222010.csv?download=1)
 

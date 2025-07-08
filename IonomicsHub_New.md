@@ -1,6 +1,5 @@
 # Welcome to the revamped Ionomics hub
 
-
 The IonomicsHub (iHUB) was first accessible to the public in 2007 as the Purdue Ionomics Information Management System (PiiMS). Hosted at Purdue University, the system provided integrated workflow control, data storage, and analysis to facilitate high-throughput ionomic data collection, along with integrated tools for data search, retrieval, visualization, and creation of DOIs associated with sets of data [(Baxter et al., 2007)](www.plantphysiol.org/cgi/doi/10.1104/pp.106.092528). 
 
 Ionomic data collected on Arabidopsis thaliana shoot samples was actively loaded onto the iHUB from 2002 – 2011. It contained ionomics data on 205,169 unique A. thaliana samples. This represented approximately 4,000,000 publically accessible data points from 15,369 unique lines/accessions, and includes 11,478 fast neutron mutagenized plants, 28,357 T-DNA mutagenized plants (representing 3,452 genes), 21,960 EMS mutagenized plants, and 40,388 wild-type plants including 753 different accessions and 1,474 inbred lines. Over the years the system was upgraded with the addition of various features (e.g. [Salt et al., 2014](http://dx.doi.org/10.1145/2567948.2577033)), and extended to host data on 26,268 rice samples and 51,554 Saccharomyces cerevisiae samples, including a genome-wide set of knockout and over expression strains [(Yu et al., 2012)](http://www.biomedcentral.com/1471-2164/13/623). Since it went live the iHUB had 15,423 unique users from 124 countries.
@@ -9,7 +8,7 @@ In 2019 the iHUB was moved to the University of Nottingham where it underwent ex
 
 Unfortunately, the ionomicshub.org address was hardcoded into the underlying code, so the full ionomicshub system crashed and we have been unable to resurrect it. To continue to provide community access to the ionomics data that was hosted at the iHUB, we have deposited the underlying datasets at Zenodo and linked them from this site using the ionomicshub.work domain. Here, we provide links for download of files containing ionomic data from the iHUB on *A. thaliana* and *S. cerevisiae*. This site no longer provides the ability to upload data, or perform searches, visualization or data set and DOI generation. The ionomicshub.work domain is owned by Ivan Baxter and it is our intention to maintain this site in perpetuity as a reference for the community. If we are able to recover additional data from the original ionomicshub.org or if others have deposited additional ionomics datasets on public repositories, we will be happy to add links to that data. 
 
-Please note that all data shared cannot be guaranteed to be the final published version of any given paper.  When available, the final published version  attached to the paper should be considered the gold standard. Where we have confirmed that we have the correct dataset, we will color the file description in green.
+Please note that all data shared cannot be guaranteed to be the final published version of any given paper. When available, the final published version  attached to the paper should be considered the gold standard. <span style="color: #006400;">  Where we have confirmed that we have the correct dataset, we have put a green checkmark next to it. </span>
 
 # File of Arabidopsis thaliana shoot ionomic data
     
@@ -59,15 +58,15 @@ Please note that all data shared cannot be guaranteed to be the final published 
 
 - Elemental concentrations (showing the isotope used for quantification) showing individual replicate samples in units of ppb divided by the optical density of the culture and normalized using the method described in Yu et al., (2012) for genome-wide overexpression collection.
 
-## [zstat_KO_111810.csv](https://zenodo.org/records/15831531/files/zstat_KO_111810.csv?download=1)
+## [zstat_KO_111810.csv](https://zenodo.org/records/15831531/files/zstat_KO_111810.csv?download=1) <span style="color: green;">&#10004;</span>
 
 - Elemental concentrations (showing the isotope used for quantification) showing zstat score for each line (replicates not shown) normalized using the method described in Yu et al., (2012) for genome-wide knockout haploid collection.
 
-## [zstat_KOd_111810.csv](https://zenodo.org/records/15831531/files/zstat_KOd_111810.csv?download=1)
+## [zstat_KOd_111810.csv](https://zenodo.org/records/15831531/files/zstat_KOd_111810.csv?download=1) <span style="color: green;">&#10004;</span>
 
 - Elemental concentrations (showing the isotope used for quantification) showing zstat score for each line (replicates not shown) normalized using the method described in Yu et al., (2012) for genome-wide knockout diploid collection.
 
-## [zstat_OE_111810.csv](https://zenodo.org/records/15831531/files/zstat_OE_111810.csv?download=1)
+## [zstat_OE_111810.csv](https://zenodo.org/records/15831531/files/zstat_OE_111810.csv?download=1) <span style="color: green;">&#10004;</span>
 
 - Elemental concentrations (showing the isotope used for quantification) showing zstat score for each line (replicates not shown) normalized using the method described in Yu et al., (2012) for genome-wide overexpression collection.
 

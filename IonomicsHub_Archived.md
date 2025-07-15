@@ -1,4 +1,4 @@
-# Welcome to the revamped Ionomics hub
+# Welcome to the archived Ionomics hub
 
 The IonomicsHub (iHUB) was first accessible to the public in 2007 as the Purdue Ionomics Information Management System (PiiMS). Hosted at Purdue University, the system provided integrated workflow control, data storage, and analysis to facilitate high-throughput ionomic data collection, along with integrated tools for data search, retrieval, visualization, and creation of DOIs associated with sets of data [(Baxter et al., 2007)](www.plantphysiol.org/cgi/doi/10.1104/pp.106.092528). 
 

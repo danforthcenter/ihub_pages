@@ -12,7 +12,10 @@ Unfortunately, the ionomicshub.org address was hardcoded into the underlying cod
 
 Please note that all data shared cannot be guaranteed to be the final published version of any given paper. When available, the final published version  attached to the paper should be considered the gold standard. <span style="color: #006400;">  Where we have confirmed that we have the correct dataset, we have put a green checkmark next to it. </span>
 
-# File of Arabidopsis thaliana shoot ionomic data
+::: {.clear-float}
+:::
+
+# Files of Arabidopsis thaliana shoot ionomic data
     
 ## [Arabidopsis_MedianNormalized_07222010](https://zenodo.org/records/15831531/files/Arabidopsis_MedianNormalized_07222010.csv?download=1)
 

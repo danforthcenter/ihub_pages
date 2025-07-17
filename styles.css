@@ -89,3 +89,11 @@ body {
         max-width: 80%; /* Allow image to take more width when stacked */
     }
 }
+
+.clear-float {
+    clear: both;
+    height: 0; /* Make it invisible and not take up space */
+    line-height: 0; /* Ensure no line-height space either */
+    font-size: 0; /* Ensure no font-size space either */
+    overflow: hidden; /* Prevent content from overflowing if by some chance it ends up inside */
+}

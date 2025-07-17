@@ -1,0 +1,91 @@
+/* sane-defaults.css */
+
+/*
+ * Table Enhancements: Dark Lines and Alternating Row Colors
+ *
+ * This section applies styling to HTML tables for improved readability.
+ * The goal is to visually separate rows and make scanning large tables easier.
+ */
+table {
+    border-collapse: collapse; /* Ensures borders merge nicely for a clean look */
+    width: 100%;               /* Makes tables span the full width of their container */
+    margin-bottom: 1em;        /* Adds some space below the table */
+}
+
+/* 1. Dark Lines Separating Rows */
+table, th, td {
+    border: 1px solid #333; /* A dark gray border for separation */
+}
+
+/* 2. Alternating Colors to Separate Rows */
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9; /* Light gray for odd rows */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #ffffff; /* White for even rows */
+}
+
+/* Header row styling for better distinction */
+thead th {
+    background-color: #eee;    /* Slightly darker background for headers */
+    padding: 8px;              /* Padding for readability */
+    text-align: left;          /* Align header text to the left */
+}
+
+/* Cell padding for general readability */
+td {
+    padding: 8px;
+}
+
+
+/*
+ * Text Formatting: Double Spacing
+ *
+ * This rule applies to common text elements like paragraphs, list items,
+ * and blockquotes to increase line height, enhancing readability
+ * for longer blocks of text.
+ */
+p, li, blockquote {
+    line-height: 2.0; /* Double spacing */
+}
+
+.float-image {
+    float: left; /* Floats the image to the left */
+    margin-right: 20px; /* Adds space to the right of the image */
+    margin-bottom: 15px; /* Adds space below the image */
+    max-width: 40%; /* Adjust as needed for your design. This is 40% of the 80% body width. */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Optional: If you want to clear the float after a specific point */
+/* For example, if you want the next heading or a new section to start below the floated image */
+h2, .new-section { /* Or any other element you want to clear the float before */
+    clear: both; /* Ensures this element starts below any floated elements */
+}
+
+/* Basic styling for overall readability and layout */
+body {
+    font-family: sans-serif;
+    line-height: 1.6; /* Default line height for elements not explicitly set */
+    max-width: 80%; /* Set overall content width to 80% of the viewport */
+    margin: 0 auto; /* Center the content block */
+    padding: 20px; /* Adds some space around the content */
+    box-sizing: border-box; /* Ensures padding is included in the width calculation */
+    background-color: #F8F8EE; /* A light, warm beige color */
+    color: #333; /* Darker text for readability on light background */
+}
+
+/* Responsive adjustments for overall body width on smaller screens */
+@media (max-width: 768px) {
+    body {
+        max-width: 95%; /* Give more breathing room on smaller screens */
+        padding: 15px; /* Slightly less padding */
+    }
+    .float-image {
+        float: none; /* Remove float on small screens */
+        display: block; /* Make image a block element */
+        margin: 0 auto 15px auto; /* Center it and add bottom margin */
+        max-width: 80%; /* Allow image to take more width when stacked */
+    }
+}

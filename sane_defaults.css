@@ -49,3 +49,18 @@ td {
 p, li, blockquote {
     line-height: 2.0; /* Double spacing */
 }
+
+/*
+ *How to center the image
+*/
+
+.image-container {
+  text-align: center; /* Centers block-level children, if img is inline-block */
+}
+
+.centered-half-width {
+  display: block; /* Important for margin: auto to work */
+  margin: 0 auto;
+  width: 50vw;
+  height: auto;
+}
